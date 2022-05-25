@@ -1,0 +1,1 @@
+xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Tap Time" 0 && xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Move Speed" 1 1.75 0.015 0 && xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Two-Finger Scrolling" 1 1
