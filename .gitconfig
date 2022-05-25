@@ -1,0 +1,8 @@
+[user]
+	email = arer@wisehome.dk
+	name = arnar
+[push]
+	default = current
+[alias]
+	tree = log --oneline --decorate --graph --color --all
+	ltree = log --oneline --decorate --graph --color
