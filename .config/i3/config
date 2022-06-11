@@ -221,3 +221,4 @@ bar {
 
 # Startup scripts
 exec --no-startup-id /home/arnar/my_scripts/cursor_fix.sh
+exec --no-startup-id /hom/arnar/.screenlayout/triple_monitor.sh
