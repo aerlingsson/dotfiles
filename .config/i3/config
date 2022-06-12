@@ -72,9 +72,9 @@ bindsym $mod+d exec dmenu_run
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+i focus up
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
 bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
@@ -84,9 +84,9 @@ bindsym $mod+l focus right
 #bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+i move up
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
@@ -221,4 +221,4 @@ bar {
 
 # Startup scripts
 exec --no-startup-id /home/arnar/my_scripts/cursor_fix.sh
-exec --no-startup-id /hom/arnar/.screenlayout/triple_monitor.sh
+exec --no-startup-id /home/arnar/.screenlayout/triple_monitor.sh
