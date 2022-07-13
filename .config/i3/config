@@ -45,7 +45,8 @@ bindsym Shift+Print exec flameshot full -c
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec kitty
+# bindsym $mod+Return exec i3-sensible-terminal
 
 # focus follows mouse
 focus_follows_mouse no

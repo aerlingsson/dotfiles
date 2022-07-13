@@ -30,6 +30,10 @@ let g:netrw_winsize=25
 let g:netrw_keepdir=0
 let g:netrw_localcopydircmd='cp -r'
 
+if has('termguicolors')
+    set termguicolors
+endif
+
 " Keybinds
 noremap <Up> <Nop>
 noremap <Down> <Nop>
@@ -68,4 +72,6 @@ let g:AutoPairs={'(':')', '[':']', '{':'}',"'":"'",'"':'"', "`":"`", '```':'```'
 "let g:airline_powerline_fonts = 1
 
 " Colorscheme
+let g:gruvbox_material_background = 'hard'
+let g:gruvbox_material_better_performance = 1
 colorscheme gruvbox-material
