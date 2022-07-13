@@ -220,5 +220,6 @@ bar {
 }
 
 # Startup scripts
+exec_always ~/my_scripts/gnome_keyring.sh
+exec_always ~/my_scripts/keyboard_layout.sh
 exec --no-startup-id /home/arnar/my_scripts/cursor_fix.sh
-exec --no-startup-id “setxkbmap -layout us,dk -option grp:alt_shift_toggle

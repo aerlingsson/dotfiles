@@ -9,6 +9,7 @@ set splitbelow splitright
 set title
 set ttimeoutlen=0
 set wildmenu
+set guifont=DroidSansMono\ Nerd\ Font\ 11
 
 " Tabs size
 set expandtab
@@ -39,10 +40,6 @@ inoremap jj <Esc>
 
 " Plugins
 call plug#begin()
-    " Appearance
-    Plug 'vim-airline/vim-airline'
-    Plug 'ryanoasis/vim-devicons'
-
     " Utilities
     Plug 'sheerun/vim-polyglot'
     Plug 'jiangmiao/auto-pairs'
@@ -54,4 +51,21 @@ call plug#begin()
     " Git
     Plug 'airblade/vim-gitgutter'
     Plug 'ctrlpvim/ctrlp.vim'
+
+    " Appearance
+    Plug 'vim-airline/vim-airline'
+    " Plug 'ryanoasis/vim-devicons'
+
+    " Colorscheme
+    Plug 'sainnhe/gruvbox-material'
+
 call plug#end()
+
+" Plugin options: auto-pairs, jiangmiao
+let g:AutoPairs={'(':')', '[':']', '{':'}',"'":"'",'"':'"', "`":"`", '```':'```', '"""':'"""', "'''":"'''", ' do':'end//s', '<div>':'</div>'}
+
+" Plugin options: vim-airline, vim-airline
+"let g:airline_powerline_fonts = 1
+
+" Colorscheme
+colorscheme gruvbox-material
