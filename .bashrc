@@ -138,3 +138,5 @@ else
     eval `ssh-agent | tee ~/.ssh/agent.env`
     ssh-add
 fi
+
+export DOTNET_ROOT=/snap/dotnet-sdk/current
