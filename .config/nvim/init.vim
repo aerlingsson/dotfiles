@@ -51,9 +51,10 @@ call plug#begin()
 
     " Completion / linters / formatters
     Plug 'plasticboy/vim-markdown'
+    Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 
     " Git
-"    Plug 'airblade/vim-gitgutter'
+    " Plug 'airblade/vim-gitgutter'
     Plug 'ctrlpvim/ctrlp.vim'
 
     " Appearance
