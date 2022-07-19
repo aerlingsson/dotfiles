@@ -34,13 +34,18 @@ if has('termguicolors')
     set termguicolors
 endif
 
-" Keybinds
+""" Keybinds
+" No arrows
 noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 
+" Exit
 inoremap jj <Esc>
+
+" FZF
+noremap <C-P> :FZF<CR>
 
 " Plugins
 call plug#begin()
@@ -48,6 +53,10 @@ call plug#begin()
     Plug 'sheerun/vim-polyglot'
     Plug 'jiangmiao/auto-pairs'
     Plug 'ap/vim-css-color'
+
+    " Fuzzy fluffy
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    " Plug 'ctrlpvim/ctrlp.vim'
 
     " Completion / linters / formatters
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -62,7 +71,6 @@ call plug#begin()
 
     " Git
     " Plug 'airblade/vim-gitgutter'
-    Plug 'ctrlpvim/ctrlp.vim'
 
     " Appearance
     Plug 'vim-airline/vim-airline'
