@@ -50,8 +50,15 @@ call plug#begin()
     Plug 'ap/vim-css-color'
 
     " Completion / linters / formatters
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'plasticboy/vim-markdown'
     Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
+
+    " Elixir
+    Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install && yarn prepack'}
+
+    " C#
+    Plug 'OmniSharp/omnisharp-vim'
 
     " Git
     " Plug 'airblade/vim-gitgutter'
