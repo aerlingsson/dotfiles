@@ -223,6 +223,6 @@ bar {
 
 # Startup scripts
 exec_always ~/my_scripts/gnome_keyring.sh
-exec_always ~/.screenlayout/screens.sh
 exec_always ~/my_scripts/keyboard_layout.sh
 exec_always ~/my_scripts/cursor_fix.sh
+exec_always ~/.screenlayout/screens.sh
