@@ -1,5 +1,6 @@
 " Options
 set background=dark
+set number relativenumber
 set clipboard=unnamedplus
 set completeopt=noinsert,menuone,noselect
 set hidden
