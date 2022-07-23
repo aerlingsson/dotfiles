@@ -145,3 +145,5 @@ else
 fi
 
 export DOTNET_ROOT=/snap/dotnet-sdk/current
+
+PATH=$PATH:$HOME/.local/bin

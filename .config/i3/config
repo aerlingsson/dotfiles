@@ -221,6 +221,9 @@ bar {
 	font pango:DejaVu Sans Mono, FontAwesome 10
 }
 
+# Disable screen blanking
+exec --no-startup-id 'xset s off -dpms'
+
 # Startup scripts
 exec_always ~/my_scripts/gnome_keyring.sh
 exec_always ~/my_scripts/keyboard_layout.sh
