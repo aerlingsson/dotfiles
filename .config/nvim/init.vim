@@ -1,6 +1,7 @@
 " Options
 set background=dark
 set number relativenumber
+set colorcolumn=120
 set clipboard=unnamedplus
 set completeopt=noinsert,menuone,noselect
 set hidden
@@ -57,9 +58,25 @@ call plug#begin()
 
     " Fuzzy fluffy
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+
+    " LSP
+    Plug 'neovim/nvim-lspconfig'
+
+    Plug 'hrsh7th/cmp-nvim-lsp'
+    Plug 'hrsh7th/cmp-buffer'
+    Plug 'hrsh7th/cmp-path'
+    Plug 'hrsh7th/cmp-cmdline'
+    Plug 'hrsh7th/nvim-cmp'
+
+    Plug 'tpope/vim-dispatch'
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+    Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
+
     " Plug 'ctrlpvim/ctrlp.vim'
 
     " Completion / linters / formatters
+    Plug 'dense-analysis/ale'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'plasticboy/vim-markdown'
     Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
@@ -87,6 +104,12 @@ let g:AutoPairs={'(':')', '[':']', '{':'}',"'":"'",'"':'"', "`":"`", '```':'```'
 
 " Plugin options: vim-airline, vim-airline
 "let g:airline_powerline_fonts = 1
+
+" Plugin options: ALE
+let g:OmniSharp_selector_findusages = 'fzf'
+let g:ale_linters = {
+\ 'cs': ['OmniSharp']
+\}
 
 " Colorscheme
 let g:gruvbox_material_background = 'hard'
