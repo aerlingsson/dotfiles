@@ -55,6 +55,7 @@ call plug#begin()
     Plug 'sheerun/vim-polyglot'
     Plug 'jiangmiao/auto-pairs'
     Plug 'ap/vim-css-color'
+    Plug 'airblade/vim-rooter'
 
     " Fuzzy fluffy
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
