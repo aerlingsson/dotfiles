@@ -80,6 +80,7 @@ call plug#begin()
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'plasticboy/vim-markdown'
     Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
+    Plug 'eslint/eslint'
 
     " Elixir
     Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install && yarn prepack'}
@@ -107,8 +108,12 @@ let g:AutoPairs={'(':')', '[':']', '{':'}',"'":"'",'"':'"', "`":"`", '```':'```'
 
 " Plugin options: ALE
 let g:OmniSharp_selector_findusages = 'fzf'
+let g:ale_fix_on_save = 1
 let g:ale_linters = {
-\ 'cs': ['OmniSharp']
+\   'cs': ['prettier', 'eslint', 'OmniSharp']
+\}
+let g:ale_fixers = {
+\   '*': ['trim_whitespace', 'prettier', 'eslint']
 \}
 
 " Colorscheme

@@ -119,7 +119,7 @@ fi
 ##### Custom things #####
 # Editor and git
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-export EDITOR='vim'
+export EDITOR='nvim'
 
 # asdf auto-complete
 . $HOME/.asdf/asdf.sh
@@ -145,5 +145,5 @@ else
 fi
 
 export DOTNET_ROOT=/snap/dotnet-sdk/current
-
+export FZF_DEFAULT_COMMAND="fdfind --exclude={.git,.idea,.vscode,.sass-cache,node_modules,build,tmp} --type f"
 PATH=$PATH:$HOME/.local/bin
