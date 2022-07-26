@@ -1,7 +1,7 @@
 " Options
 set background=dark
 set number relativenumber
-set colorcolumn=120
+"set colorcolumn=120
 set clipboard=unnamedplus
 set completeopt=noinsert,menuone,noselect
 set hidden
@@ -74,13 +74,10 @@ call plug#begin()
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 
-    " Plug 'ctrlpvim/ctrlp.vim'
-
     " Completion / linters / formatters
     Plug 'dense-analysis/ale'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'plasticboy/vim-markdown'
-    Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
     Plug 'eslint/eslint'
 
     " Elixir
@@ -89,12 +86,8 @@ call plug#begin()
     " C#
     Plug 'OmniSharp/omnisharp-vim'
 
-    " Git
-    " Plug 'airblade/vim-gitgutter'
-
     " Appearance
     Plug 'vim-airline/vim-airline'
-    " Plug 'ryanoasis/vim-devicons'
 
     " Colorscheme
     Plug 'sainnhe/gruvbox-material'
@@ -111,13 +104,17 @@ let g:AutoPairs={'(':')', '[':']', '{':'}',"'":"'",'"':'"', "`":"`", '```':'```'
 let g:OmniSharp_selector_findusages = 'fzf'
 let g:ale_fix_on_save = 1
 let g:ale_linters = {
-\   'cs': ['prettier', 'eslint', 'OmniSharp']
+\   'cs': ['eslint', 'OmniSharp']
 \}
 let g:ale_fixers = {
-\   '*': ['trim_whitespace', 'prettier', 'eslint']
+\   '*': ['trim_whitespace', 'eslint']
 \}
 
 " Colorscheme
 let g:gruvbox_material_background = 'hard'
+let g:gruvbox_material_foreground = 'material'
+let g:gruvbox_material_enable_bold = 1
+let g:gruvbox_material_transparent_background = 0
+let g:gruvbox_material_ui_contrast = 'low'
 let g:gruvbox_material_better_performance = 1
 colorscheme gruvbox-material
