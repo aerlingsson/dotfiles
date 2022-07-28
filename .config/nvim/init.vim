@@ -113,7 +113,7 @@ let g:ale_fixers = {
 " Colorscheme
 let g:gruvbox_material_background = 'hard'
 let g:gruvbox_material_foreground = 'material'
-let g:gruvbox_material_enable_bold = 1
+"let g:gruvbox_material_enable_bold = 1
 let g:gruvbox_material_transparent_background = 0
 let g:gruvbox_material_ui_contrast = 'low'
 let g:gruvbox_material_better_performance = 1
