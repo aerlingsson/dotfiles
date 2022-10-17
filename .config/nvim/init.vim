@@ -64,6 +64,12 @@ call plug#begin()
 
     " Fuzzy fluffy
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+    Plug 'kyazdani42/nvim-web-devicons'
+    Plug 'tpope/vim-dispatch'
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+    Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 
     " LSP
     Plug 'neovim/nvim-lspconfig'
@@ -73,11 +79,6 @@ call plug#begin()
     Plug 'hrsh7th/cmp-path'
     Plug 'hrsh7th/cmp-cmdline'
     Plug 'hrsh7th/nvim-cmp'
-
-    Plug 'tpope/vim-dispatch'
-    Plug 'nvim-lua/plenary.nvim'
-    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-    Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 
     " Completion / linters / formatters
     Plug 'dense-analysis/ale'
@@ -96,6 +97,9 @@ call plug#begin()
 
     " Colorscheme
     Plug 'sainnhe/gruvbox-material'
+
+    " Fennel
+    Plug 'rktjmp/hotpot.nvim'
 
 call plug#end()
 

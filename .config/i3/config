@@ -99,6 +99,7 @@ bindsym $mod+Shift+l move right
 
 # split in horizontal orientation
 # bindsym $mod+h split h
+bindsym $mod+c split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -221,14 +222,18 @@ bindsym $mod+r mode "resize"
 #	font pango:DejaVu Sans Mono, FontAwesome 10
 #}
 
-# Disable screen blanking
-exec --no-startup-id 'xset s off -dpms'
-
 # Startup scripts
 exec_always ~/my_scripts/gnome_keyring.sh
 exec_always ~/my_scripts/keyboard_layout.sh
-exec_always ~/my_scripts/cursor_fix.sh
 exec_always ~/.screenlayout/screens.sh
+
+# Disable screen blanking
+exec_always --no-startup-id xset s off
+exec_always --no-startup-id xset -dpms
+
+# Sometimes crashes
+exec_always ~/my_scripts/cursor_fix.sh
+
 
 ################################
 #### Gruvbox Material Light ####
