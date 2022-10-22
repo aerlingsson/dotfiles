@@ -1,0 +1,10 @@
+session_name: dominus
+windows:
+- focus: 'true'
+  layout: 5ee1,284x79,0,0{142x79,0,0,0,141x79,143,0,1}
+  options: {}
+  panes:
+  - nvim .
+  - focus: 'true'
+  start_directory: /home/aerlingsson/rlis/dominus
+  window_name: bash
