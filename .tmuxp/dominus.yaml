@@ -6,5 +6,6 @@ windows:
   panes:
   - nvim .
   - focus: 'true'
+    shell_command: git status
   start_directory: /home/aerlingsson/rlis/dominus
   window_name: bash
