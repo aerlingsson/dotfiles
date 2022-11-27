@@ -222,6 +222,10 @@ bindsym $mod+r mode "resize"
 #	font pango:DejaVu Sans Mono, FontAwesome 10
 #}
 
+# Custom script keybinds
+bindsym $mod+y exec ~/my_scripts/eDP_off.sh
+bindsym $mod+Shift+y exec ~/my_scripts/eDP_on.sh
+
 # Startup scripts
 exec_always ~/my_scripts/gnome_keyring.sh
 exec_always ~/my_scripts/keyboard_layout.sh
