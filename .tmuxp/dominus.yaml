@@ -8,4 +8,4 @@ windows:
   - focus: 'true'
     shell_command: git status
   start_directory: /home/aerlingsson/rlis/dominus
-  window_name: bash
+  window_name: dominus
