@@ -2,7 +2,8 @@
 HISTFILE=~/.histfile
 HISTSIZE=5000
 SAVEHIST=5000
-bindkey -v
+bindkey -v # VI mode
+export PS1="%n:%~%# " # Prompt string
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/aerlingsson/.zshrc'
