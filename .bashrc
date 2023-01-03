@@ -148,6 +148,20 @@ fi
 ## images - icat
 alias icat="kitty +kitten icat"
 
+# curl with times
+curltime() {
+    curl -so /dev/null -w "\
+   namelookup:  %{time_namelookup}s\n\
+      connect:  %{time_connect}s\n\
+   appconnect:  %{time_appconnect}s\n\
+  pretransfer:  %{time_pretransfer}s\n\
+     redirect:  %{time_redirect}s\n\
+starttransfer:  %{time_starttransfer}s\n\
+-------------------------\n\
+        total:  %{time_total}s\n" "$@"
+}
+
+# Exports
 export DOTNET_ROOT=/snap/dotnet-sdk/current
 export FZF_DEFAULT_COMMAND="fdfind --exclude={.git,.idea,.vscode,.sass-cache,node_modules,build,tmp} --type f"
 PATH=$PATH:$HOME/.local/bin
