@@ -152,4 +152,5 @@ starttransfer:  %{time_starttransfer}s\n\
 # Exports
 export DOTNET_ROOT=/snap/dotnet-sdk/current
 export FZF_DEFAULT_COMMAND="fdfind --exclude={.git,.idea,.vscode,.sass-cache,node_modules,build,tmp} --type f"
+export DISABLE_AUTO_TITLE="true"
 PATH=$PATH:$HOME/.local/bin
