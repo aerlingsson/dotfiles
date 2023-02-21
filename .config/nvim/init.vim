@@ -18,6 +18,10 @@ set expandtab
 set shiftwidth=2
 set tabstop=2
 
+" Encoding
+set enc=utf8
+set fenc=utf8
+
 " Syntax
 filetype plugin indent on
 syntax on
