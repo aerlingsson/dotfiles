@@ -1,7 +1,7 @@
 " Options
 set background=dark
 set number relativenumber
-"set colorcolumn=120
+set colorcolumn=80
 set clipboard=unnamedplus
 set completeopt=noinsert,menuone,noselect
 set hidden
@@ -78,20 +78,18 @@ call plug#begin()
     " LSP
     Plug 'neovim/nvim-lspconfig'
 
+    Plug 'hrsh7th/nvim-cmp'
     Plug 'hrsh7th/cmp-nvim-lsp'
+    Plug 'hrsh7th/vim-vsnip'
     Plug 'hrsh7th/cmp-buffer'
     Plug 'hrsh7th/cmp-path'
     Plug 'hrsh7th/cmp-cmdline'
-    Plug 'hrsh7th/nvim-cmp'
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
     " Completion / linters / formatters
     Plug 'dense-analysis/ale'
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'plasticboy/vim-markdown'
     Plug 'eslint/eslint'
-
-    " Elixir
-    Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install && yarn prepack'}
 
     " C#
     Plug 'OmniSharp/omnisharp-vim'
