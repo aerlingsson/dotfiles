@@ -235,6 +235,10 @@ exec_always ~/.screenlayout/screens.sh
 exec_always --no-startup-id xset s off
 exec_always --no-startup-id xset -dpms
 
+# Set background
+exec_always --no-startup-id feh --bg-scale ~/Pictures/forest.jpg
+exec_always --no-startup-id picom -b
+
 # Sometimes crashes
 exec_always ~/my_scripts/cursor_fix.sh
 
