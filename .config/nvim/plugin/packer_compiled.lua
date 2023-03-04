@@ -104,6 +104,11 @@ _G.packer_plugins = {
     path = "/home/aerlingsson/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["copilot.vim"] = {
+    loaded = true,
+    path = "/home/aerlingsson/.local/share/nvim/site/pack/packer/start/copilot.vim",
+    url = "https://github.com/github/copilot.vim"
+  },
   everforest = {
     config = { "\27LJ\2\2Ü\2\0\0\2\0\t\0\0296\0\0\0009\0\1\0'\1\2\0B\0\2\0016\0\0\0009\0\1\0'\1\3\0B\0\2\0016\0\0\0009\0\1\0'\1\4\0B\0\2\0016\0\0\0009\0\1\0'\1\5\0B\0\2\0016\0\0\0009\0\1\0'\1\6\0B\0\2\0016\0\0\0009\0\1\0'\1\a\0B\0\2\0016\0\0\0009\0\1\0'\1\b\0B\0\2\1K\0\1\0\27colorscheme everforest,let g:everforest_better_performance = 1'let g:everforest_enable_italic = 10let g:everforest_transparent_background = 2)let g:everforest_background = \"hard\"\24set background=dark\22set termguicolors\bcmd\bvim\0" },
     loaded = true,
