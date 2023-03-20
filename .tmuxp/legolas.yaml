@@ -1,0 +1,35 @@
+session_name: wisehome
+windows:
+
+- focus: 'false'
+  layout: 55e0,284x77,0,0{142x77,0,0,0,141x77,143,0,1}
+  options: {}
+  panes:
+  - vim .
+  - focus: 'true'
+    shell_command: git status
+  start_directory: /home/arnar/wisehome/butterbur
+  window_index: 2
+  window_name: butterbur
+
+- focus: 'false'
+  layout: 55e0,284x77,0,0{142x77,0,0,0,141x77,143,0,1}
+  options: {}
+  panes:
+  - vim .
+  - focus: 'true'
+    shell_command: git status
+  start_directory: /home/arnar/wisehome/arwen
+  window_index: 1
+  window_name: arwen
+
+- focus: 'false'
+  layout: 55e0,284x77,0,0{142x77,0,0,0,141x77,143,0,1}
+  options: {}
+  panes:
+  - vim .
+  - focus: 'true'
+    shell_command: git status
+  start_directory: /home/arnar/wisehome/legolas
+  window_index: 0
+  window_name: legolas
