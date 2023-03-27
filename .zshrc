@@ -108,7 +108,7 @@ bindkey -v # VI mode
 
 # Editor and git
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-export EDITOR='nvim'
+export EDITOR='vim'
 
 # asdf auto-complete
 . $HOME/.asdf/asdf.sh
@@ -149,6 +149,12 @@ starttransfer:  %{time_starttransfer}s\n\
 -------------------------\n\
         total:  %{time_total}s\n" "$@"
 }
+
+# Aliases
+alias mixcheck="mix credo && mix dialyzer && mix test"
+alias gits="git status"
+alias gitpf="git push --force-with-lease"
+alias gitapf="git add -p && git commit --amend && git push --force-with-lease"
 
 # Exports
 export DOTNET_ROOT=/snap/dotnet-sdk/current
