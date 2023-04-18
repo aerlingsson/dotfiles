@@ -1,6 +1,6 @@
 session_name: dominus
 windows:
-- focus: 'true'
+- focus: 'false'
   layout: 5ee1,284x79,0,0{142x79,0,0,0,141x79,143,0,1}
   options: {}
   panes:
