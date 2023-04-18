@@ -34,10 +34,14 @@ return require('packer').startup(function(use)
     use('tpope/vim-fugitive')
     use('williamboman/mason.nvim')
     use('github/copilot.vim')
+    use('adelarsq/neofsharp.vim')
 
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v1.x',
+        config = function()
+            require("lspconfig").fsharp_language_server.setup {}
+        end,
         requires = {
             -- LSP Support
             { 'neovim/nvim-lspconfig' }, -- Required
