@@ -126,4 +126,7 @@ lsp.on_attach(function(client, bufnr)
     end
 end)
 
+-- Does not seem to work with diagnostics [d and ]d. Maybe other things don't work either?
+require('lspconfig').fsharp_language_server.setup {cmd = {"dotnet", "/home/aerlingsson/fsharp-language-server/src/FSharpLanguageServer/bin/Release/net6.0/FSharpLanguageServer.dll"}}
+
 lsp.setup()
