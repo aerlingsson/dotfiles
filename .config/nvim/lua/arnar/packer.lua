@@ -13,6 +13,7 @@ return require('packer').startup(function(use)
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
+    -- Theme
     use({
         'sainnhe/everforest',
         as = 'everforest',
@@ -27,6 +28,7 @@ return require('packer').startup(function(use)
         end
     })
 
+    -- Plugins
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use('nvim-treesitter/playground')
     use('theprimeagen/harpoon')
@@ -34,8 +36,16 @@ return require('packer').startup(function(use)
     use('tpope/vim-fugitive')
     use('williamboman/mason.nvim')
     use('github/copilot.vim')
-    use('adelarsq/neofsharp.vim')
+    use('junegunn/fzf.vim')
 
+    -- Debugging
+    use('puremourning/vimspector')
+
+    -- .NET
+    use('adelarsq/neofsharp.vim')
+    use('OmniSharp/omnisharp-vim')
+
+    -- LSP Zero
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v1.x',
