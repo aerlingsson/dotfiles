@@ -14,18 +14,86 @@ return require('packer').startup(function(use)
     }
 
     -- Theme
+--    use({
+--        'sainnhe/everforest',
+--        as = 'everforest',
+--        config = function()
+--            vim.cmd('set termguicolors')
+--            vim.cmd('set background=dark')
+--            vim.cmd('let g:everforest_background = "hard"')
+--            vim.cmd('let g:everforest_transparent_background = 1')
+--            vim.cmd('let g:everforest_enable_italic = 1')
+--            vim.cmd('let g:everforest_better_performance = 1')
+--            vim.cmd('colorscheme everforest')
+--        end
+--    })
+
     use({
-        'sainnhe/everforest',
-        as = 'everforest',
+        'adisen99/codeschool.nvim',
+        as = 'codeschool',
+        requires = { 'rktjmp/lush.nvim' },
         config = function()
-            vim.cmd('set termguicolors')
-            vim.cmd('set background=dark')
-            vim.cmd('let g:everforest_background = "hard"')
-            vim.cmd('let g:everforest_transparent_background = 2')
-            vim.cmd('let g:everforest_enable_italic = 1')
-            vim.cmd('let g:everforest_better_performance = 1')
-            vim.cmd('colorscheme everforest')
-        end
+            require('lush')(require('codeschool').setup({
+                plugins = {
+                    "buftabline",
+                    "coc",
+                    "cmp", -- nvim-cmp
+                    "fzf",
+                    "gitgutter",
+                    "gitsigns",
+                    "lsp",
+                    "lspsaga",
+                    "nerdtree",
+                    "netrw",
+                    "nvimtree",
+                    "neogit",
+                    "packer",
+                    "signify",
+                    "startify",
+                    "syntastic",
+                    "telescope",
+                    "treesitter"
+                },
+                langs = {
+                    "c",
+                    "clojure",
+                    "coffeescript",
+                    "csharp",
+                    "css",
+                    "elixir",
+                    "golang",
+                    "haskell",
+                    "html",
+                    "java",
+                    "js",
+                    "json",
+                    "jsx",
+                    "lua",
+                    "markdown",
+                    "moonscript",
+                    "objc",
+                    "ocaml",
+                    "purescript",
+                    "python",
+                    "ruby",
+                    "rust",
+                    "scala",
+                    "typescript",
+                    "viml",
+                    "xml"
+                }
+            }))
+            vim.cmd('let g:codeschool_italicize_comments = "true"')
+            vim.cmd('let g:codeschool_bold = 1')
+            vim.cmd('let g:codeschool_italic = 1')
+            vim.cmd('let g:codeschool_sign_column = "bg0"')
+            vim.cmd('let g:codeschool_invert_tabline = 0')
+            vim.cmd('let g:codeschool_improved_strings = 0')
+            vim.cmd('let g:codeschool_improved_warnings = 1')
+            vim.cmd('let g:codeschool_transparent_bg = 1')
+            vim.cmd('let g:codeschool_contrast_dark = "soft"')
+            vim.cmd('colorscheme codeschool')
+      end
     })
 
     -- Plugins
