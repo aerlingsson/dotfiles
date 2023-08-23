@@ -1,13 +1,13 @@
 One-liner:
 ```bash
-echo "\nAdding config alias to .bashrc..."
-"alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'" >> .bashrc
 echo "\nAdding .cfg to .gitignore..." &&
 echo ".cfg" >> .gitignore &&
 echo "\nCloning repo..." &&
 git clone --bare git@github.com:aerlingsson/dotfiles.git $HOME/.cfg &&
 echo "\nSetting config alias..." &&
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME' &&
+echo "Removing .bashrc and .gitignore"
+rm .bashrc .gitignore
 echo "\nDoing config checkout..." &&
 bash &&
 config checkout
