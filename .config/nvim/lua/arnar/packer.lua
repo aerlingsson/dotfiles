@@ -8,26 +8,26 @@ return require('packer').startup(function(use)
     use('wbthomason/packer.nvim')
 
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.1',
-        -- or                            , branch = '0.1.x',
+        'nvim-telescope/telescope.nvim',
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
     -- Theme
---    use({
---        'sainnhe/everforest',
---        as = 'everforest',
---        config = function()
---            vim.cmd('set termguicolors')
---            vim.cmd('set background=dark')
---            vim.cmd('let g:everforest_background = "hard"')
---            vim.cmd('let g:everforest_transparent_background = 1')
---            vim.cmd('let g:everforest_enable_italic = 1')
---            vim.cmd('let g:everforest_better_performance = 1')
---            vim.cmd('colorscheme everforest')
---        end
---    })
+    use({
+        'sainnhe/everforest',
+        as = 'everforest',
+        config = function()
+            vim.cmd('set termguicolors')
+            vim.cmd('set background=dark')
+            vim.cmd('let g:everforest_background = "hard"')
+            vim.cmd('let g:everforest_transparent_background = 1')
+            vim.cmd('let g:everforest_enable_italic = 1')
+            vim.cmd('let g:everforest_better_performance = 1')
+            vim.cmd('colorscheme everforest')
+        end
+    })
 
+--[[
     use({
         'adisen99/codeschool.nvim',
         as = 'codeschool',
@@ -95,6 +95,7 @@ return require('packer').startup(function(use)
             vim.cmd('colorscheme codeschool')
       end
     })
+--]]
 
     use ({
         'ojroques/nvim-hardline',
@@ -131,11 +132,17 @@ return require('packer').startup(function(use)
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
     use('williamboman/mason.nvim')
-    use('github/copilot.vim')
+    --use('github/copilot.vim')
     use('junegunn/fzf.vim')
-
+    use('mechatroner/rainbow_csv')
     -- Debugging
-    use('puremourning/vimspector')
+    use({
+        'puremourning/vimspector',
+        as = 'vimspector',
+        config = function()
+            vim.cmd('let g:vimspector_enable_mappings = "HUMAN"')
+        end
+    })
 
     -- .NET
     use('adelarsq/neofsharp.vim')
@@ -163,6 +170,13 @@ return require('packer').startup(function(use)
             { 'L3MON4D3/LuaSnip' }, -- Required
             { 'rafamadriz/friendly-snippets' }, -- Optional
         }
+    }
+
+    use {
+        'ionide/Ionide-vim',
+        run = function()
+            vim.fn.system('make fsautocomplete')
+        end
     }
 
     use {

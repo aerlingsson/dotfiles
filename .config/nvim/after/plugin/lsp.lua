@@ -14,6 +14,7 @@ lsp.ensure_installed({
     'jsonls',
     'omnisharp',
     'lua_ls',
+    'fsautocomplete'
 })
 
 local cmp = require('cmp')
@@ -127,6 +128,9 @@ lsp.on_attach(function(client, bufnr)
 end)
 
 -- Does not seem to work with diagnostics [d and ]d. Maybe other things don't work either?
-require('lspconfig').fsharp_language_server.setup {cmd = {"dotnet", "/home/aerlingsson/fsharp-language-server/src/FSharpLanguageServer/bin/Release/net6.0/FSharpLanguageServer.dll"}}
+--require('lspconfig').fsharp_language_server.setup {cmd = {"dotnet", "/Users/aerlingsson/fsharp-language-server/src/FSharpLanguageServer/bin/Release/net6.0/FSharpLanguageServer.dll"}}
+
+-- Should be automatically enabled by ionide-vim
+-- require'lspconfig'.fsautocomplete.setup{}
 
 lsp.setup()

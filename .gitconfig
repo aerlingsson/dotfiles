@@ -1,6 +1,7 @@
 [user]
-	email = arer@wisehome.dk
-	name = aerlingssonwh
+	email = ahe@in-commodities.com
+	name = ahe-incom
+	signingkey = /Users/aerlingsson/.ssh/incom-github-sign.pub
 [push]
 	default = current
 [alias]
@@ -16,3 +17,11 @@
     cmd = kitty +kitten diff $LOCAL $REMOTE
 [difftool "kitty.gui"]
     cmd = kitty kitty +kitten diff $LOCAL $REMOTE
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
+[init]
+	defaultBranch = main

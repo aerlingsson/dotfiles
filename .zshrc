@@ -71,7 +71,7 @@ ZSH_THEME="jbergantine"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git dotnet macos)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -151,13 +151,20 @@ starttransfer:  %{time_starttransfer}s\n\
 }
 
 # Aliases
+alias py="python3"
 alias mixcheck="mix credo && mix dialyzer && mix test"
 alias gits="git status"
 alias gitpf="git push --force-with-lease"
 alias gitapf="git add -p && git commit --amend && git push --force-with-lease"
 
 # Exports
-export DOTNET_ROOT=/snap/dotnet-sdk/current
+# The DOTNET_ROOT variable may have been causing LSP issues on mac
+#export DOTNET_ROOT=/snap/dotnet-sdk/current
+export ASPNETCORE_ENVIRONMENT=Development
+export DOCKER_BUILDKIT=1
 export FZF_DEFAULT_COMMAND="fdfind --exclude={.git,.idea,.vscode,.sass-cache,node_modules,build,tmp} --type f"
 export DISABLE_AUTO_TITLE="true"
 PATH=$PATH:$HOME/.local/bin
+
+export JAVA_HOME=`/usr/libexec/java_home`
+
