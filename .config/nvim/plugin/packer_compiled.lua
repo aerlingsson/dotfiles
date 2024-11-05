@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/aerlingsson/.cache/nvim/packer_hererocks/2.1.1716656478/share/lua/5.1/?.lua;/Users/aerlingsson/.cache/nvim/packer_hererocks/2.1.1716656478/share/lua/5.1/?/init.lua;/Users/aerlingsson/.cache/nvim/packer_hererocks/2.1.1716656478/lib/luarocks/rocks-5.1/?.lua;/Users/aerlingsson/.cache/nvim/packer_hererocks/2.1.1716656478/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/aerlingsson/.cache/nvim/packer_hererocks/2.1.1716656478/lib/lua/5.1/?.so"
+local package_path_str = "/Users/aerlingsson/.cache/nvim/packer_hererocks/2.1.1727870382/share/lua/5.1/?.lua;/Users/aerlingsson/.cache/nvim/packer_hererocks/2.1.1727870382/share/lua/5.1/?/init.lua;/Users/aerlingsson/.cache/nvim/packer_hererocks/2.1.1727870382/lib/luarocks/rocks-5.1/?.lua;/Users/aerlingsson/.cache/nvim/packer_hererocks/2.1.1727870382/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/aerlingsson/.cache/nvim/packer_hererocks/2.1.1727870382/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -74,11 +74,6 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  ["Ionide-vim"] = {
-    loaded = true,
-    path = "/Users/aerlingsson/.local/share/nvim/site/pack/packer/start/Ionide-vim",
-    url = "https://github.com/ionide/Ionide-vim"
-  },
   LuaSnip = {
     loaded = true,
     path = "/Users/aerlingsson/.local/share/nvim/site/pack/packer/start/LuaSnip",
@@ -126,7 +121,7 @@ _G.packer_plugins = {
     url = "https://github.com/junegunn/fzf.vim"
   },
   hardline = {
-    config = { "\27LJ\2\nŠ\a\0\0\b\0\30\0L6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\14\0005\4\6\0006\5\0\0'\a\a\0B\5\2\0029\5\b\5=\5\t\4>\4\1\0035\4\n\0006\5\0\0'\a\v\0B\5\2\0029\5\b\5=\5\t\4>\4\2\0035\4\f\0006\5\0\0'\a\r\0B\5\2\0029\5\b\5=\5\t\4>\4\3\0035\4\15\0>\4\5\0035\4\16\0006\5\0\0'\a\17\0B\5\2\0029\5\b\5=\5\t\4>\4\6\0035\4\18\0006\5\0\0'\a\19\0B\5\2\0029\5\20\5=\5\t\4>\4\a\0035\4\21\0006\5\0\0'\a\19\0B\5\2\0029\5\22\5=\5\t\4>\4\b\0035\4\23\0006\5\0\0'\a\24\0B\5\2\0029\5\b\5=\5\t\4>\4\t\0035\4\25\0006\5\0\0'\a\26\0B\5\2\0029\5\b\5=\5\t\4>\4\n\0035\4\27\0006\5\0\0'\a\28\0B\5\2\0029\5\b\5=\5\t\4>\4\v\3=\3\29\2B\0\2\1K\0\1\0\rsections\24hardline.parts.line\1\0\2\nclass\tmode\titem\0\28hardline.parts.filetype\1\0\3\nclass\thigh\titem\0\thide\3<\30hardline.parts.whitespace\1\0\2\nclass\fwarning\titem\0\16get_warning\1\0\2\nclass\fwarning\titem\0\14get_error\23hardline.parts.lsp\1\0\2\nclass\nerror\titem\0\29hardline.parts.wordcount\1\0\3\nclass\blow\titem\0\thide\3d\1\0\2\nclass\bmed\titem\a%=\1\5\0\0\0\0\0\a%<\28hardline.parts.filename\1\0\2\nclass\bmed\titem\0\23hardline.parts.git\1\0\3\nclass\thigh\titem\0\thide\3d\titem\rget_item\24hardline.parts.mode\1\0\2\nclass\tmode\titem\0\24bufferline_settings\1\0\2\15show_index\1\21exclude_terminal\1\1\0\4\ntheme\fdefault\24bufferline_settings\0\rsections\0\15bufferline\1\nsetup\rhardline\frequire\0" },
+    config = { "\27LJ\2\nŠ\a\0\0\b\0\30\0L6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\14\0005\4\6\0006\5\0\0'\a\a\0B\5\2\0029\5\b\5=\5\t\4>\4\1\0035\4\n\0006\5\0\0'\a\v\0B\5\2\0029\5\b\5=\5\t\4>\4\2\0035\4\f\0006\5\0\0'\a\r\0B\5\2\0029\5\b\5=\5\t\4>\4\3\0035\4\15\0>\4\5\0035\4\16\0006\5\0\0'\a\17\0B\5\2\0029\5\b\5=\5\t\4>\4\6\0035\4\18\0006\5\0\0'\a\19\0B\5\2\0029\5\20\5=\5\t\4>\4\a\0035\4\21\0006\5\0\0'\a\19\0B\5\2\0029\5\22\5=\5\t\4>\4\b\0035\4\23\0006\5\0\0'\a\24\0B\5\2\0029\5\b\5=\5\t\4>\4\t\0035\4\25\0006\5\0\0'\a\26\0B\5\2\0029\5\b\5=\5\t\4>\4\n\0035\4\27\0006\5\0\0'\a\28\0B\5\2\0029\5\b\5=\5\t\4>\4\v\3=\3\29\2B\0\2\1K\0\1\0\rsections\24hardline.parts.line\1\0\2\nclass\tmode\titem\0\28hardline.parts.filetype\1\0\3\nclass\thigh\titem\0\thide\3<\30hardline.parts.whitespace\1\0\2\nclass\fwarning\titem\0\16get_warning\1\0\2\nclass\fwarning\titem\0\14get_error\23hardline.parts.lsp\1\0\2\nclass\nerror\titem\0\29hardline.parts.wordcount\1\0\3\nclass\blow\titem\0\thide\3d\1\0\2\nclass\bmed\titem\a%=\1\5\0\0\0\0\0\a%<\28hardline.parts.filename\1\0\2\nclass\bmed\titem\0\23hardline.parts.git\1\0\3\nclass\thigh\titem\0\thide\3d\titem\rget_item\24hardline.parts.mode\1\0\2\nclass\tmode\titem\0\24bufferline_settings\1\0\2\15show_index\1\21exclude_terminal\1\1\0\4\24bufferline_settings\0\ntheme\fdefault\rsections\0\15bufferline\1\nsetup\rhardline\frequire\0" },
     loaded = true,
     path = "/Users/aerlingsson/.local/share/nvim/site/pack/packer/start/hardline",
     url = "https://github.com/ojroques/nvim-hardline"
@@ -140,6 +135,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/aerlingsson/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
     url = "https://github.com/VonHeikemen/lsp-zero.nvim"
+  },
+  ["lsp_signature.nvim"] = {
+    config = { "\27LJ\2\n}\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\17handler_opts\1\0\1\vborder\frounded\1\0\2\tbind\2\17handler_opts\0\nsetup\18lsp_signature\frequire\0" },
+    loaded = true,
+    path = "/Users/aerlingsson/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim",
+    url = "https://github.com/ray-x/lsp_signature.nvim"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
@@ -170,11 +171,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/aerlingsson/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
-  },
-  ["omnisharp-vim"] = {
-    loaded = true,
-    path = "/Users/aerlingsson/.local/share/nvim/site/pack/packer/start/omnisharp-vim",
-    url = "https://github.com/OmniSharp/omnisharp-vim"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -226,22 +222,26 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: hardline
+time([[Config for hardline]], true)
+try_loadstring("\27LJ\2\nŠ\a\0\0\b\0\30\0L6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\14\0005\4\6\0006\5\0\0'\a\a\0B\5\2\0029\5\b\5=\5\t\4>\4\1\0035\4\n\0006\5\0\0'\a\v\0B\5\2\0029\5\b\5=\5\t\4>\4\2\0035\4\f\0006\5\0\0'\a\r\0B\5\2\0029\5\b\5=\5\t\4>\4\3\0035\4\15\0>\4\5\0035\4\16\0006\5\0\0'\a\17\0B\5\2\0029\5\b\5=\5\t\4>\4\6\0035\4\18\0006\5\0\0'\a\19\0B\5\2\0029\5\20\5=\5\t\4>\4\a\0035\4\21\0006\5\0\0'\a\19\0B\5\2\0029\5\22\5=\5\t\4>\4\b\0035\4\23\0006\5\0\0'\a\24\0B\5\2\0029\5\b\5=\5\t\4>\4\t\0035\4\25\0006\5\0\0'\a\26\0B\5\2\0029\5\b\5=\5\t\4>\4\n\0035\4\27\0006\5\0\0'\a\28\0B\5\2\0029\5\b\5=\5\t\4>\4\v\3=\3\29\2B\0\2\1K\0\1\0\rsections\24hardline.parts.line\1\0\2\nclass\tmode\titem\0\28hardline.parts.filetype\1\0\3\nclass\thigh\titem\0\thide\3<\30hardline.parts.whitespace\1\0\2\nclass\fwarning\titem\0\16get_warning\1\0\2\nclass\fwarning\titem\0\14get_error\23hardline.parts.lsp\1\0\2\nclass\nerror\titem\0\29hardline.parts.wordcount\1\0\3\nclass\blow\titem\0\thide\3d\1\0\2\nclass\bmed\titem\a%=\1\5\0\0\0\0\0\a%<\28hardline.parts.filename\1\0\2\nclass\bmed\titem\0\23hardline.parts.git\1\0\3\nclass\thigh\titem\0\thide\3d\titem\rget_item\24hardline.parts.mode\1\0\2\nclass\tmode\titem\0\24bufferline_settings\1\0\2\15show_index\1\21exclude_terminal\1\1\0\4\24bufferline_settings\0\ntheme\fdefault\rsections\0\15bufferline\1\nsetup\rhardline\frequire\0", "config", "hardline")
+time([[Config for hardline]], false)
+-- Config for: lsp_signature.nvim
+time([[Config for lsp_signature.nvim]], true)
+try_loadstring("\27LJ\2\n}\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\17handler_opts\1\0\1\vborder\frounded\1\0\2\tbind\2\17handler_opts\0\nsetup\18lsp_signature\frequire\0", "config", "lsp_signature.nvim")
+time([[Config for lsp_signature.nvim]], false)
 -- Config for: todo-comments.nvim
 time([[Config for todo-comments.nvim]], true)
 try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18todo-comments\frequire\0", "config", "todo-comments.nvim")
 time([[Config for todo-comments.nvim]], false)
--- Config for: everforest
-time([[Config for everforest]], true)
-try_loadstring("\27LJ\2\nÜ\2\0\0\3\0\t\0\0296\0\0\0009\0\1\0'\2\2\0B\0\2\0016\0\0\0009\0\1\0'\2\3\0B\0\2\0016\0\0\0009\0\1\0'\2\4\0B\0\2\0016\0\0\0009\0\1\0'\2\5\0B\0\2\0016\0\0\0009\0\1\0'\2\6\0B\0\2\0016\0\0\0009\0\1\0'\2\a\0B\0\2\0016\0\0\0009\0\1\0'\2\b\0B\0\2\1K\0\1\0\27colorscheme everforest,let g:everforest_better_performance = 1'let g:everforest_enable_italic = 10let g:everforest_transparent_background = 1)let g:everforest_background = \"hard\"\24set background=dark\22set termguicolors\bcmd\bvim\0", "config", "everforest")
-time([[Config for everforest]], false)
 -- Config for: vimspector
 time([[Config for vimspector]], true)
 try_loadstring("\27LJ\2\nN\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0/let g:vimspector_enable_mappings = \"HUMAN\"\bcmd\bvim\0", "config", "vimspector")
 time([[Config for vimspector]], false)
--- Config for: hardline
-time([[Config for hardline]], true)
-try_loadstring("\27LJ\2\nŠ\a\0\0\b\0\30\0L6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\14\0005\4\6\0006\5\0\0'\a\a\0B\5\2\0029\5\b\5=\5\t\4>\4\1\0035\4\n\0006\5\0\0'\a\v\0B\5\2\0029\5\b\5=\5\t\4>\4\2\0035\4\f\0006\5\0\0'\a\r\0B\5\2\0029\5\b\5=\5\t\4>\4\3\0035\4\15\0>\4\5\0035\4\16\0006\5\0\0'\a\17\0B\5\2\0029\5\b\5=\5\t\4>\4\6\0035\4\18\0006\5\0\0'\a\19\0B\5\2\0029\5\20\5=\5\t\4>\4\a\0035\4\21\0006\5\0\0'\a\19\0B\5\2\0029\5\22\5=\5\t\4>\4\b\0035\4\23\0006\5\0\0'\a\24\0B\5\2\0029\5\b\5=\5\t\4>\4\t\0035\4\25\0006\5\0\0'\a\26\0B\5\2\0029\5\b\5=\5\t\4>\4\n\0035\4\27\0006\5\0\0'\a\28\0B\5\2\0029\5\b\5=\5\t\4>\4\v\3=\3\29\2B\0\2\1K\0\1\0\rsections\24hardline.parts.line\1\0\2\nclass\tmode\titem\0\28hardline.parts.filetype\1\0\3\nclass\thigh\titem\0\thide\3<\30hardline.parts.whitespace\1\0\2\nclass\fwarning\titem\0\16get_warning\1\0\2\nclass\fwarning\titem\0\14get_error\23hardline.parts.lsp\1\0\2\nclass\nerror\titem\0\29hardline.parts.wordcount\1\0\3\nclass\blow\titem\0\thide\3d\1\0\2\nclass\bmed\titem\a%=\1\5\0\0\0\0\0\a%<\28hardline.parts.filename\1\0\2\nclass\bmed\titem\0\23hardline.parts.git\1\0\3\nclass\thigh\titem\0\thide\3d\titem\rget_item\24hardline.parts.mode\1\0\2\nclass\tmode\titem\0\24bufferline_settings\1\0\2\15show_index\1\21exclude_terminal\1\1\0\4\ntheme\fdefault\24bufferline_settings\0\rsections\0\15bufferline\1\nsetup\rhardline\frequire\0", "config", "hardline")
-time([[Config for hardline]], false)
+-- Config for: everforest
+time([[Config for everforest]], true)
+try_loadstring("\27LJ\2\nÜ\2\0\0\3\0\t\0\0296\0\0\0009\0\1\0'\2\2\0B\0\2\0016\0\0\0009\0\1\0'\2\3\0B\0\2\0016\0\0\0009\0\1\0'\2\4\0B\0\2\0016\0\0\0009\0\1\0'\2\5\0B\0\2\0016\0\0\0009\0\1\0'\2\6\0B\0\2\0016\0\0\0009\0\1\0'\2\a\0B\0\2\0016\0\0\0009\0\1\0'\2\b\0B\0\2\1K\0\1\0\27colorscheme everforest,let g:everforest_better_performance = 1'let g:everforest_enable_italic = 10let g:everforest_transparent_background = 1)let g:everforest_background = \"hard\"\24set background=dark\22set termguicolors\bcmd\bvim\0", "config", "everforest")
+time([[Config for everforest]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

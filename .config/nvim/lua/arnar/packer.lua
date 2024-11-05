@@ -146,7 +146,26 @@ return require('packer').startup(function(use)
 
     -- .NET
     use('adelarsq/neofsharp.vim')
-    use('OmniSharp/omnisharp-vim')
+--[[
+    use({
+        'OmniSharp/omnisharp-vim',
+        config = function()
+            vim.cmd('let g:Omnisharp_server_use_mono = 1')
+            vim.cmd('let g:ale_linters = { "cs": ["OmniSharp"] }')
+            vim.cmd('let g:OmniSharp_selector_ui = "fzf"')
+            vim.cmd('let g:OmniSharp_selector_findusages = "fzf"')
+        end
+    })
+--]]
+
+--[[
+    use {
+        'ionide/Ionide-vim',
+        run = function()
+            vim.fn.system('make fsautocomplete')
+        end
+    }
+--]]
 
     -- LSP Zero
     use {
@@ -173,10 +192,15 @@ return require('packer').startup(function(use)
     }
 
     use {
-        'ionide/Ionide-vim',
-        run = function()
-            vim.fn.system('make fsautocomplete')
-        end
+      'ray-x/lsp_signature.nvim',
+      config = function()
+          require("lsp_signature").setup({
+              bind = true,
+              handler_opts = {
+                  border = "rounded"
+              }
+          })
+      end
     }
 
     use {
